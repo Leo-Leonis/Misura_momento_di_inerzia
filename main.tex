@@ -1,0 +1,82 @@
+\documentclass[a4paper,12pt,italian]{article}
+
+% pacchetti------------------------------
+\include{tex/preamble.tex}
+
+
+% INIZIO DOCUMENTO ---------------------------------------
+\begin{document}
+
+\input{tex/0_0_titlepage}
+
+\newpage
+
+% Intro
+\section*{Introduzione}
+\addcontentsline{toc}{section}{Introduzione}
+\input{tex/0_2_Introduzione}
+
+
+% 1. Metodo sperimentale
+\section{Metodo sperimentale}
+In questo paragrafo verranno trattati la strumentazione utilizzata, i metodi di misurazione e le formule utilizzate per il calcolo indiretto.
+
+%%%%% 1.1 Apparato sperimentale
+    \subsection{Apparato sperimentale}
+
+    \input{tex/1_1_Apparato_sperimentale.tex}
+
+%%%%% 1.2 Svolgimento
+    \subsection{Svolgimento}
+    
+    \input{tex/1_2_Svolgimento.tex}
+
+\newpage
+% 2. Risultati
+\section{Risultati}
+In questo paragrafo verranno trattati i risultati di misure dirette e misure indirette e metodi con cui si è eseguito l'analisi dei dati
+%%%%% 2.1 Acquisizione dati
+
+    \subsection{Acquisizione dati}
+    
+    \input{tex/2_1_Acquisizione_dati.tex}
+    
+%%%%% 2.2 Elaborazione dati e risultati quantitativi
+
+    \subsection{Elaborazione dati e risultati quantitativi}
+    
+    \input{tex/2_2_Elaborazione_dati_e_risultati_quantitativi}
+
+% conclusione -----------------------------------
+\section*{Conclusione}
+\addcontentsline{toc}{section}{Conclusione}
+\input{tex/3_Conclusioni.tex}
+
+%Documento realizzato in \LaTeX, sul sito di %Overleaf$^{\textrm{\cite{overleaf}}}$. Le fonti utilizzati in %fisica sono $^{\textrm{\cite{libroditerza}}}$, %$^{\textrm{\cite{librodiquarta}}}$, %$^{\textrm{\cite{librodiquinta}}}$, %$^{\textrm{\cite{librodiwilliam}}}$ e %$^{\textrm{\cite{tesidilaurea}}}$. Le fonti utilizzati per %matematica sono $^{\textrm{\cite{librodimate1}}}$ e %$^{\textrm{\cite{librodimate2}}}$.
+\newpage
+
+% indice
+\tableofcontents
+
+% elenco delle figure
+\listoffigures
+% elenco delle tabelle
+\listoftables
+\newpage
+
+% bibliografia
+\printbibliography[nottype=online, title=Bibliografia]
+% sitografia
+%\printbibliography[type=online, title=Sitografia]
+
+\newpage
+
+\renewcommand{\appendixpagename}{Appendici}
+\renewcommand{\appendixtocname}{Appendici}
+\appendix
+\appendixpage
+\addappheadtotoc
+
+\input{tex/A_Appendice}
+
+\end{document}

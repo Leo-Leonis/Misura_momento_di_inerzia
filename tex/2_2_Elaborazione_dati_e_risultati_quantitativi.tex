@@ -1,0 +1,94 @@
+%% 2.2 Elaborazione dati e risutati quantitativi
+In questo paragrafo si riportano i dati elaborati, il calcolo delle misure indirette e la valutazione degli errori.\\
+Per le grandezze per le quali si sono fatte più misure (tranne per il tempo) si è considerata come stima migliore la media, mentre come incertezza la semidispersione delle misure.\\
+Nel caso in cui alcune incertezze valutate con la semidispersione siano risultati non sensati rispetto al setup sperimentale (per esempio incertezze troppo basse), allora si è andati a considerare la risoluzione dello strumento come incertezza.
+
+\subsubsection*{Metodo geometrico}
+I valori dei diametri $d_i$ sono:
+    \begin{align*}
+        d_1 &= (7.86 \pm 0.09) \textrm{ mm} \\
+        d_2 &= (15.94 \pm 0.01) \textrm{ mm} \\
+        d_3 &= (57.98 \pm 0.01) \textrm{ mm} \\
+        d_4 &= (99.88 \pm 0.01) \textrm{ mm} \\
+        d_5 &= (120.04 \pm 0.01) \textrm{ mm} 
+    \end{align*}
+Per le profondità $p_i$ e lo spessore del toroide più esterno $z_4$ si riportano i seguenti valori:
+    \begin{align*}
+        p_1 &= (8.1 \pm 0.1) \textrm{ mm} \\
+        p_2 &= (3.09 \pm 0.05) \textrm{ mm} \\
+        p_3 &= (13.14 \pm 0.05) \textrm{ mm} \\
+        z_4 &= (29.96 \pm 0.01) \textrm{ mm} \\
+    \end{align*}
+Attraverso un'analisi geometrica della sezione assiale del disco, riportato in Fig. \ref{profondità} a pag. \pageref{profondità}, i spessori dei primi tre toroidi sono risultati:
+    \begin{align*}
+        z_1 &= (26.1 \pm 0.4) \textrm{ mm} \\
+        z_2 &= (9.9 \pm 0.2) \textrm{ mm} \\
+        z_3 &= (3.7 \pm 0.1) \textrm{ mm}
+    \end{align*}
+in cui gli errori sono stati calcolati secondo la propagazione degli errori considerando l'incertezza massima.\\
+
+Per il calcolo del momento d'inerzia, ricorrendo alla formula (\ref{I_G}) a pag. \pageref{I_G}, si è ottenuto il valore di 
+$$I_G = 4.91 \cdot 10^{-4} \textrm{ kg} \cdot \textrm{m}^2$$
+Per la valutazione dell'errore si è ricorso al metodo della propagazione dell'errore con derivate, procedimento mostrato a App. \ref{errore_I_G} a pag. \pageref{errore_I_G}.\\
+Dunque il valore finale di $I_G$ è di
+$$I_G = (4.91 \pm 0.08) \cdot 10^{-4} \textrm{ kg} \cdot \textrm{m}^2$$
+
+\subsubsection*{Metodo dinamico}
+Per il metodo dinamico il valore della massa del disco era già stato fornito \textit{a priori}: 
+$$m = (226.0 \pm 0.5) \textrm{ g}$$
+Le misure dell'altezza di caduta, del diametro del perno e del filo sono stati:
+\begin{align*}
+    h_o &= (35.5 \pm 0.1) \textrm{ cm} \\
+    d_p &= (0.42 \pm 0.03) \textrm{ mm} \\
+    d_f &= (3.01 \pm 0.01) \textrm{ mm}
+\end{align*}
+Le misure del tempo di caduta del disco sono state raccolte in bin da 0.1 s, con occorrenze per ogni bin indicato nella Tab. \ref{tab_tempi_di_caduta_2}.
+\begin{table}[htp]
+    \begin{center}
+        \begin{tabular}{||c|c||}
+            \hline
+            \hline
+            \multicolumn{2}{||c||}{Tempi di caduta}\\
+            \hline \hline
+            tempo [s] & occorrenze \\
+            \hline
+            7.2 & 1\\
+            7.3 & 7\\
+            7.4 & 18\\
+            7.5 & 9\\
+            7.6 & 4\\
+            7.7 & 1\\
+            \hline
+            \hline
+        \end{tabular}
+    \end{center}
+    \caption[\small Tabella di tempi di caduta - occorrenze.]{\small Sono indicati i numeri di occorrenze dei tempi di caduta del disco per bin ampi 0.1 s. Si nota che il valore del tempo di caduta medio è di 7.43 s.}
+    \label{tab_tempi_di_caduta_2}
+\end{table}\\
+Analizzando graficamente i dati della Tab. \ref{tab_tempi_di_caduta_2} si hanno ottenuto due grafici d'istogramma: il primo indica il numero delle occorrenze per bin (Fig. \ref{istogramma_tempi_di_caduta}), il secondo invece indica la frequenza dei valori in ogni bin (Fig. \ref{distribuzione_tempi_di_caduta}).
+     \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=\textwidth]{image/Istogramma_tempi_di_caduta.jpeg}
+        \caption[\small L'istogramma del conteggio dei tempi di caduta del disco.]{\small Nell'istogramma sono riportati il numero di occorrenze (sull'asse delle ordinate) in corrispondenza di ogni bin da 0.1 s (sull'asse delle ascisse). Invece la linea spezzata arancione rappresenterebbe il valore atteso secondo la gaussiana con media e deviazione standard calcolato con i dati riportati in Tab. \ref{tab_tempi_di_caduta_2}.}
+        \label{istogramma_tempi_di_caduta}
+    \end{figure}
+    
+    \begin{figure}[htbp]
+        \centering
+        \input{graph/tempidicaduta}
+        \caption[\small L'istogramma della distribuzione dei tempi di caduta del disco.]{\small Istogramma riportante la distribuzione della frequenza delle misure relative ai tempi di caduta. La curva verde rappresenta la gaussiana che rappresenterebbe al meglio la PDF associata alla distribuzione.}
+        \label{distribuzione_tempi_di_caduta}
+    \end{figure}
+
+Con queste informazioni si è andati a calcolare il valore del tempo medio di caduta come $t_o$:
+$$t_o = 7.43 \textrm{ s}$$
+Mentre come valore dell'incertezza del tempo di caduta si è preso in considerazione la deviazione standard della media delle misure, di cui riportiamo la formula in App. \ref{SD} a pag. \pageref{SD}. Tuttavia, dato il numero ridotto di campionamenti, si considera anche un fattore di copertura $k=3$. Si riporta il valore dell'incertezza di $t_o$.
+$$\Delta t_o = 0.05 \textrm{ s}$$
+Perciò il valore finale di $t_o$ è
+$$\displaystyle t_o = (7.43 \pm 0.05) \textrm{ s}$$\\
+
+Ottenuto tutti valori necessari per la valutazione del momento d'inerzia calcolato per via dinamica $I_D$, con $ g = 9.81$ m/s$^2$, si da il seguente risultato, secondo la formula (\ref{I_D}) a pag. \pageref{I_D}:
+$$ I_D = 5.1 \cdot 10^{-4} \textrm{ kg} \cdot \textrm{m}^2$$
+
+Per la valutazione dell'incertezza di $I_D$ si è usato la propagazione degli errori per incertezze massime (riportiamo la formula in App. \ref{errore_I_D} a pag. \pageref{errore_I_D}). Perciò il valore finale di $I_D$ è di 
+$$ I_D = (5.1 \pm 0.2) \cdot 10^{-4} \textrm{ kg} \cdot \textrm{m}^2$$

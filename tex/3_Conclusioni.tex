@@ -1,0 +1,17 @@
+% Conclusione
+
+Dai risultati ottenuti si confrontano i valori di $I_D$ e $I_G$:
+
+\begin{align*}
+    I_G &= (4.91 \pm 0.08) \cdot 10^{-4} \textrm{ kg} \cdot \textrm{m}^2\\
+    I_D &= (5.1 \pm 0.2) \cdot 10^{-4} \textrm{ kg} \cdot \textrm{m}^2 \\
+\end{align*}
+Per cui si può affermare che i valori sono compatibili entro l'errore.\\
+
+Si osserva che $I_G$ è minore di $I_D$. Questo potrebbe essere causato dal non considerare il momento d'inerzia del cilindro metallico. Ma si scopre subito che trascurare la parte metallica è giustificata, perché il suo raggio è molto piccolo. Infatti, facendo una stima, sapendo che la densità di un metallo $\rho_{m}$ è tipicamente di 8 g/cm$^3$ (come il ferro, l'acciaio, rame...), considerando $r_m = d_1/2$ come raggio e $z_1$ come spessore, allora il suo momento d'inerzia è
+$$I_m = \frac{1}{2} m_m r_m^2 = \frac{\rho_m \pi}{32} z_1 d_1^4 \approx 8 \cdot 10^{-8} \textrm{ kg} \cdot \textrm{m}^2$$
+che rappresenta circa il 0.016\% rispetto a $I_m$. Si evince che la discrepanza è probabilmente dovuta ad altri fattori.\\
+
+I risultati ottenuti comunque hanno senso dal punto di vista fisico: se il disco fosse stato ripieno, o omogeneo, questa avrebbe avuto più massa e quindi anche più momento d'inerzia (vista l'additività). Infatti, facendo un veloce calcolo, considerato un disco con stessa densità $\rho$, diametro $d_5$ e spessore $z_4$, allora il suo momento d'inerzia $I'$ sarebbe stato di
+$$I' = \frac{\rho \pi}{32} z_4 d_5^4 \approx 8 \cdot 10^{-4} \textrm{ kg} \cdot \textrm{m}^2$$
+ossia quasi il doppio del disco non omogeneo.

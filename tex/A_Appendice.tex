@@ -1,0 +1,19 @@
+\section{Valutazione dell'incertezza di $I_G$}
+ \label{errore_I_G}
+L'incertezza del valore del momento d'inerzia $\Delta I_G$ è valutato secondo il metodo della propagazione degli errori con derivate$^{\textrm{\cite{statistica}}}$.
+Quindi, ricorrendo alla formula (\ref{I_G}),
+    \begin{align*}
+        \displaystyle \Delta I_G & = \left|\frac{\partial I_G}{\partial \rho}\right|\Delta \rho + \sum_{i=1}^5 \left|\frac{\partial I_G}{\partial d_i}\right|\Delta d_i + \sum_{i=1}^4 \left|\frac{\partial I_G}{\partial z_i}\right|\Delta z_i \\
+        & = \frac{I_G}{\rho} \Delta \rho + \frac{\rho \pi}{8} \left[ \left(z_1 d_1^3 \Delta d_1 + z_4d_5^3 \Delta d_5\right) + \sum_{1=2}^4 \left( d_i^3 |z_i - z_{i-1}|\Delta d_i \right)\right] + \sum_{i=1}^4 \left( \frac{I_i}{z_i} \Delta z_i \right)
+    \end{align*}
+    
+\section{Deviazione standard della media di $t_o$} \label{SD}
+
+Per la valutazione dell'incertezza di $t_o$, lo si valuta come la deviazione standard della media dei valori di $t_o$ e si è utilizzato, insieme ad un fattore di copertura $k$, la seguente formula:
+$$\displaystyle \Delta t_o = k \sigma_{\bar{t_o}} = k \cdot \sqrt{\frac{\displaystyle \sum_{i=1}^N (t_i - \bar{t_o})^2}{N(N-1)}}$$
+valevole per un serie di $N$ misure $t_i$, con $\Bar{t_o}$ come valore medio.
+
+\section{Valutazione dell'incertezza di $I_D$} \label{errore_I_D}
+L'errore di $I_D$ è calcolato secondo la propagazione degli errore per incertezza massima:
+
+$$\displaystyle \frac{\Delta I_D}{I_D} = \frac{\Delta m}{m} + 2\frac{(\Delta d_f + \Delta d_p)}{d_f + d_p} + \frac{\Delta h_o}{h_o} + 2\frac{\Delta t_o}{t_o}$$
